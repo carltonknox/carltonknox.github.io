@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="Photos by Carlton Knox." name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Carlton Knox" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <title>Photos | Carlton Knox</title>
+
+<link href="./main.3f6952e4.css" rel="stylesheet">
+<link href="./assets/site.css" rel="stylesheet">
+<style>
+  /* Justified rows: each photo's width is proportional to its aspect ratio (--r),
+     so every row is the same height and no photo is cropped. */
+  .gallery { display: flex; flex-wrap: wrap; gap: 12px; }
+  .gallery::after { content: ""; flex-grow: 999999; } /* keeps the last row from stretching */
+  .gallery figure { margin: 0; flex-grow: calc(var(--r) * 100); flex-basis: calc(var(--r) * 260px); }
+  .gallery a { display: block; cursor: zoom-in; }
+  .gallery img { display: block; width: 100%; aspect-ratio: var(--r); object-fit: cover; }
+  .gallery figcaption { font-size: 0.8em; padding-top: 6px; opacity: 0.65; }
+  @media (max-width: 543px) {
+    .gallery figure { flex-basis: calc(var(--r) * 150px); }
+  }
+
+  /* Lightbox */
+  .lightbox { position: fixed; inset: 0; z-index: 2000; display: none;
+              align-items: center; justify-content: center; flex-direction: column;
+              background: rgba(0, 0, 0, 0.92); }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 94vw; max-height: 86vh; display: block; }
+  .lightbox p { color: #ddd; margin-top: 12px; font-size: 0.85em; }
+  .lightbox button { position: absolute; background: rgba(255, 255, 255, 0.12); color: #fff;
+                     border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 22px;
+                     line-height: 44px; padding: 0; cursor: pointer; }
+  .lightbox button:hover { background: rgba(255, 255, 255, 0.28); }
+  .lightbox .lb-close { top: 16px; right: 16px; }
+  .lightbox .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lightbox .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+</style>
+</head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+ <!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Research</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+          <li><a href="./photos.html" title="">05 : Photos</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="section-container-spacer text-center">
+          <h1 class="h2">05 : Photos</h1>
+        </div>
+
+        <!-- Thumbnails live in assets/images/thumbs/; each links to the full-size copy.
+             --r is the photo's width/height ratio. -->
+        <div class="gallery">
+          <figure style="--r:0.75">
+            <a href="./assets/images/brookline_tracks.jpg"><img src="./assets/images/thumbs/brookline_tracks.jpg" alt="Trolley tracks under autumn trees at night" loading="lazy"></a>
+            <figcaption>Brookline, MA</figcaption>
+          </figure>
+          <figure style="--r:1.333">
+            <a href="./assets/images/Boston.jpg"><img src="./assets/images/thumbs/Boston.jpg" alt="Downtown Boston towers at dusk above old brick rooftops" loading="lazy"></a>
+            <figcaption>Downtown Boston</figcaption>
+          </figure>
+          <figure style="--r:1.775">
+            <a href="./assets/images/guanajuato_2.jpg"><img src="./assets/images/thumbs/guanajuato_2.jpg" alt="Yellow basilica with red domes under a blue sky" loading="lazy"></a>
+            <figcaption>Guanajuato, Mexico</figcaption>
+          </figure>
+          <figure style="--r:2.143">
+            <a href="./assets/images/mt_aso_cow.jpg"><img src="./assets/images/thumbs/mt_aso_cow.jpg" alt="Cows grazing on golden grassland above the clouds" loading="lazy"></a>
+            <figcaption>Mt. Aso, Japan</figcaption>
+          </figure>
+          <figure style="--r:1.327">
+            <a href="./assets/images/newyork_1.jpg"><img src="./assets/images/thumbs/newyork_1.jpg" alt="The High Line crossing over a city street" loading="lazy"></a>
+            <figcaption>The High Line, New York City</figcaption>
+          </figure>
+          <figure style="--r:0.753">
+            <a href="./assets/images/firework.jpg"><img src="./assets/images/thumbs/firework.jpg" alt="Fireworks reflected over water at night" loading="lazy"></a>
+            <figcaption>Fireworks</figcaption>
+          </figure>
+          <figure style="--r:1.775">
+            <a href="./assets/images/mt_aso.jpg"><img src="./assets/images/thumbs/mt_aso.jpg" alt="Valley farmland below Mt. Aso, framed by a wooden fence" loading="lazy"></a>
+            <figcaption>Mt. Aso, Japan</figcaption>
+          </figure>
+          <figure style="--r:0.753">
+            <a href="./assets/images/acadia_maine.jpg"><img src="./assets/images/thumbs/acadia_maine.jpg" alt="Hikers climbing a granite cliff among pine trees" loading="lazy"></a>
+            <figcaption>Acadia National Park, ME</figcaption>
+          </figure>
+          <figure style="--r:1.327">
+            <a href="./assets/images/maine.jpg"><img src="./assets/images/thumbs/maine.jpg" alt="Rocky coastline and blue sea" loading="lazy"></a>
+            <figcaption>Acadia National Park, ME</figcaption>
+          </figure>
+          <figure style="--r:1.779">
+            <a href="./assets/images/Boston4.jpg"><img src="./assets/images/thumbs/Boston4.jpg" alt="Bare tree branch over the Charles River" loading="lazy"></a>
+            <figcaption>Charles River, Boston</figcaption>
+          </figure>
+          <figure style="--r:1.775">
+            <a href="./assets/images/guanajuato_1.jpg"><img src="./assets/images/thumbs/guanajuato_1.jpg" alt="White colonnaded building and stairs overlooking a colorful hillside town" loading="lazy"></a>
+            <figcaption>Guanajuato, Mexico</figcaption>
+          </figure>
+          <figure style="--r:1.775">
+            <a href="./assets/images/mt_aso_2.jpg"><img src="./assets/images/thumbs/mt_aso_2.jpg" alt="Wide valley and mountains at Mt. Aso under a bright cloudy sky" loading="lazy"></a>
+            <figcaption>Mt. Aso, Japan</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Full-size viewer: Esc / X / click outside to close, arrow keys to browse.
+     The image is the real full-size jpg, so right-click > Save works. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-prev" aria-label="Previous photo">&lsaquo;</button>
+  <button class="lb-next" aria-label="Next photo">&rsaquo;</button>
+  <img alt="">
+  <p></p>
+</div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Carlton Knox | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a> | Photos by Carlton Knox</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".gallery a"));
+    var box = document.getElementById("lightbox");
+    var img = box.querySelector("img");
+    var caption = box.querySelector("p");
+    var current = -1;
+
+    function show(i) {
+      current = (i + links.length) % links.length;
+      var link = links[current];
+      img.src = link.href;
+      img.alt = link.querySelector("img").alt;
+      caption.textContent = link.parentNode.querySelector("figcaption").textContent;
+      box.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function close() {
+      box.classList.remove("open");
+      img.removeAttribute("src");
+      document.body.style.overflow = "";
+      current = -1;
+    }
+
+    links.forEach(function (link, i) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        show(i);
+      });
+    });
+
+    box.querySelector(".lb-close").addEventListener("click", close);
+    box.querySelector(".lb-prev").addEventListener("click", function () { show(current - 1); });
+    box.querySelector(".lb-next").addEventListener("click", function () { show(current + 1); });
+    box.addEventListener("click", function (e) {
+      if (e.target === box) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (current < 0) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") show(current - 1);
+      else if (e.key === "ArrowRight") show(current + 1);
+    });
+  })();
+</script>
+
+<script type="text/javascript" src="./main.70a66962.js"></script></body>
+
+</html>

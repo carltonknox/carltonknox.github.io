@@ -1,0 +1,24 @@
+/* Site-specific overrides on top of the Mashup template (main.*.css). */
+
+/* Push the footer to the bottom of the window on short pages (e.g. Contact). */
+.section-container {
+  min-height: calc(100vh - 143px);
+}
+
+/* Footer ribbon: the storm-cloud photo as a short full-width strip at the end of each page. */
+.footer-container {
+  background: url("./images/Boston5.jpg") center 40% / cover no-repeat;
+  padding: 26px 0;
+  margin-top: 40px;
+}
+.footer-container p {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 14px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+.footer-container a {
+  color: #fff;
+  text-decoration: underline;
+}
